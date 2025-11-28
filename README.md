@@ -1,66 +1,60 @@
-# WLAN-Password-INFO
+# WLAN Password INFO
 
-## Beschreibung
+## Description
 
-Dieses Batch-Skript ermöglicht es, die gespeicherten WLAN-Profile und deren Passwörter auf einem Windows-System anzuzeigen. Es verwendet den Befehl `netsh wlan show profiles`, um verfügbare WLAN-Profile aufzulisten und detaillierte Informationen zu einem bestimmten WLAN-Profil (inklusive gespeicherten Passworts) abzurufen.
+This batch script allows you to display the stored Wi-Fi profiles and their passwords on a Windows system. It uses the command `netsh wlan show profiles` to list available Wi-Fi profiles and retrieve detailed information about a specific Wi-Fi profile (including the stored password).
 
-### Voraussetzungen
+### Requirements
 
-- Das Skript muss **mit Administratorrechten** ausgeführt werden.
-- Das WLAN-Profil, dessen Informationen angezeigt werden sollen, muss auf dem Computer lokal gespeichert sein.
-
----
-
-## Funktionsweise
-
-1. **Anzeige der gespeicherten WLAN-Profile**:
-   - Das Skript listet alle auf dem System gespeicherten WLAN-Profile auf.
-
-2. **Eingabe des Netzwerknamens (SSID)**:
-   - Der Benutzer wird aufgefordert, den Namen eines Netzwerks (SSID) aus der Liste einzugeben.
-
-3. **Abrufen von Informationen**:
-   - Das Skript zeigt die gespeicherten Informationen des angegebenen Netzwerks an, einschließlich des Passworts (falls gespeichert). Das Passwort erscheint unter dem Feld `Schlüsselinhalt`.
-
-4. **Fehlerbehandlung**:
-   - Wenn das Netzwerkprofil nicht existiert oder keine Informationen verfügbar sind, zeigt das Skript eine entsprechende Fehlermeldung an.
+- The script must be run **with administrator privileges**.
+- The Wi-Fi profile whose information is to be displayed must be locally stored on the computer.
 
 ---
 
-## Nutzung
+## How It Works
 
-1. **Batch-Datei ausführen**:
-   - Rechtsklick auf die Datei und "Als Administrator ausführen" auswählen.
+1. **Display stored Wi-Fi profiles**:  
+   - The script lists all Wi-Fi profiles saved on the system.
 
-2. **Ablauf**:
-   - Nach dem Start werden alle gespeicherten WLAN-Profile angezeigt.
-   - Gib den gewünschten Netzwerk-Namen (SSID) ein.
-   - Das Skript zeigt die entsprechenden Informationen an, einschließlich des Passworts (falls verfügbar).
+2. **Enter the network name (SSID)**:  
+   - The user is prompted to enter the name of a network (SSID) from the list.
 
-3. **Beispielausgabe**:
-   ```
-   Verfügbare WLAN-Profile:
-   Profil 1: MeinWLAN
-   Profil 2: GästeWLAN
+3. **Retrieve information**:  
+   - The script displays the stored information of the specified network, including the password (if saved). The password appears under the field `Key Content`.
 
-   Bitte gib den Namen des Netzwerks (SSID) ein: MeinWLAN
-
-   Informationen für das Netzwerk "MeinWLAN":
-   Schlüsselinhalt = MeinPasswort123
-   ```
+4. **Error handling**:  
+   - If the network profile does not exist or no information is available, the script shows an appropriate error message.
 
 ---
 
-## Hinweise
+## Usage
 
-- **Passwörter anzeigen**: Das Feld `Schlüsselinhalt` enthält das gespeicherte Passwort, falls verfügbar.
-- **Berechtigungen**: Das Skript benötigt Administratorrechte, um auf die gespeicherten Netzwerk-Informationen zugreifen zu können.
-- **Sprache des Systems**: Auf nicht-deutschen Windows-Systemen könnte `Schlüsselinhalt` als `Key Content` angezeigt werden.
+1. **Run the batch file**:  
+   - Right-click the file and select "Run as administrator."
+
+2. **Process**:  
+   - After starting, all stored Wi-Fi profiles are displayed.  
+   - Enter the desired network name (SSID).  
+   - The script shows the corresponding information, including the password (if available).
+
+3. **Example output**:
+   - Available Wi-Fi profiles: Profile 1: MyWiFi Profile 2: GuestWiFi
+   - Please enter the network name (SSID): MyWiFi
+   - Information for the network "MyWiFi": Key Content = MyPassword123
+
 
 ---
 
-## Haftungsausschluss
+## Notes
 
-Dieses Skript ist nur für den privaten Gebrauch gedacht. Es sollte nicht für unbefugten Zugriff auf Netzwerke verwendet werden. Der Autor übernimmt keine Haftung für den Missbrauch des Skripts.
+- **Password display**: The field `Key Content` contains the stored password, if available.  
+- **Permissions**: The script requires administrator privileges to access stored network information.  
+- **System language**: On non-German Windows systems, `Schlüsselinhalt` may appear as `Key Content`.
+
+---
+
+## Disclaimer
+
+This script is intended for private use only. It should not be used for unauthorized access to networks. The author assumes no liability for misuse of the script.
 
 ---
